@@ -1,0 +1,382 @@
+
+
+:root {
+    --bg: #2e51dd;
+    --text: #171a21;
+    --muted: #656b78;
+    --accent: #5b5bd6;
+    --card-bg: #ffffff;
+    --border: #e2e4ea;
+}
+
+
+
+
+body.dark-theme {
+    --bg: #111318;
+    --text: #f3f4f6;
+    --muted: #a6abb7;
+    --accent: #8d8df5;
+    --card-bg: #1a1d24;
+    --border: #2b303b;
+}
+
+
+/* Remove default spacing */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--bg);
+    color: var(--text);
+
+    line-height: 1.6;
+
+    transition: 0.3s;
+}
+
+
+
+.hero {
+    min-height: 88vh;
+    padding: 24px 8%;
+}
+
+
+.navbar {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav-links a {
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+
+/* Theme button */
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--card-bg);
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+
+/* -------------------------
+   HERO SECTION
+------------------------- */
+
+.hero-content {
+    max-width: 900px;
+
+    margin: 150px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+
+.avatar {
+    width: 145px;
+    height: 145px;
+
+    border-radius: 50%;
+
+    background-color: var(--accent);
+
+    color: white;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 40px;
+
+    font-weight: bold;
+}
+
+
+.small-text,
+.section-label {
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+h1 {
+    font-size: clamp(42px, 7vw, 72px);
+
+    line-height: 1.05;
+
+    margin: 12px 0 18px;
+}
+
+
+h1 span {
+    color: var(--accent);
+}
+
+
+.intro {
+    color: var(--muted);
+
+    max-width: 550px;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+
+.main-btn {
+    display: inline-block;
+
+    background-color: var(--accent);
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+
+
+.section {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 85px 25px;
+}
+
+
+h2 {
+    font-size: 34px;
+
+    margin: 8px 0 25px;
+}
+
+
+.about-card,
+.contact-card {
+
+    background-color: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 28px;
+
+}
+
+
+.about-card p,
+.contact-card p {
+    color: var(--muted);
+}
+
+
+.about-card p + p {
+    margin-top: 15px;
+}
+
+
+
+
+.skills-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.skills-list span {
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--card-bg);
+
+    border-radius: 30px;
+
+    font-size: 14px;
+}
+
+
+
+
+.contact-links {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+
+.contact-links a {
+
+    text-decoration: none;
+
+    color: var(--accent);
+
+    border: 1px solid var(--border);
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+}
+
+
+
+
+footer {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    border-top: 1px solid var(--border);
+
+    padding: 25px;
+
+    font-size: 13px;
+}
+
+
+/* -------------------------
+   MOBILE
+------------------------- */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .hero-content {
+
+        margin-top: 100px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+
+    .avatar {
+
+        width: 100px;
+        height: 100px;
+
+        font-size: 28px;
+    }
+
+
+    h1 {
+        font-size: 48px;
+    }
+
+
+    .section {
+
+        padding: 65px 20px;
+    }
+
+
+    h2 {
+        font-size: 28px;
+    }
+
+
+    .contact-links {
+
+        flex-direction: column;
+    }
+
+}
